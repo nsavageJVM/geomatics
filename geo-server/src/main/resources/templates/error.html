@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+   <h3> ooops </h3>
+   <div>
+
+	    <form th:action="@{/logout}" method="POST">
+	         <input type="submit" value="Logout"/>
+	    </form>
+   </div>
+   <p  th:text="${error}">exception Error Message</p>
+
+
+</body>
+</html>   

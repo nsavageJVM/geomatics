@@ -1,0 +1,27 @@
+version: "3"
+services:
+  pg:
+    image: mdillon/postgis:9.6
+    container_name: pg
+    environment:
+      - POSTGRES_PASSWORD=nothing
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/p_gis:/var/lib/postgresql/data
+
+  geos:
+    image: geonode/geoserver
+    container_name: geo_s
+    ports:
+      - 8080:8080
+    volumes:
+      - ~/geo_s:/geoserver_data/data
+
+
+  sboot:
+    image: geomatic
+    container_name: s_boot
+    ports:
+      - 9000:9000
+

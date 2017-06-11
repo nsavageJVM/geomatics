@@ -1,0 +1,2 @@
+﻿-- use geomatic;   a connection to PostgreSQL it is always to a particular database
+CREATE TABLE test ( "key" character varying(20) NOT NULL,large_poly geometry NOT NULL,CONSTRAINT simple_pl PRIMARY KEY (key));

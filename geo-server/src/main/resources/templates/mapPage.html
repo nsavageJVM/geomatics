@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+
+        <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+              integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+              crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+                integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+                crossorigin=""></script>
+
+        <script th:src="@{/js/mapJs.js}" href="../../js/mapJs.js"  ></script>
+
+
+
+</head>
+<body>
+<div class="row">
+        <div class="col-md-12">
+
+                        <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                        <h3 class="panel-title">Geomatic Engineering</h3>
+                                        <!-- input id="detailsBtn" class="btn btn-link" style="display:inline-block;position:absolute;right:80px;top:4px;color:red"
+                                               type="button" value="Details" title="Click to see device details"/ -->
+                                        <a class="btn btn-link" style="display:inline-block;position:absolute;right:20px;top:4px;color:white" href="#" th:href="@{/}">Home</a>
+                                </div>
+
+                                <div id="mapid"></div>
+
+                        </div>
+        </div>
+</div>
+
+        <script>
+            $( document ).ready(function() {
+                console.log( "document loaded" );
+                initMap();
+            });
+
+            $( window ).on( "load", function() {
+                console.log( "window loaded" );
+            });
+    </script>
+
+
+</body>
+</html>

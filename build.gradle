@@ -1,0 +1,49 @@
+// == buildscript ==
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        mavenLocal()
+    }
+
+    dependencies {
+        
+    }
+}
+
+
+ext {
+  
+}
+
+
+allprojects {
+
+}
+
+subprojects {
+
+
+}
+
+task runSceneBuilder(type: Exec) {
+
+    doFirst {
+        println "Starting SceneBuilder..."
+        workingDir = "./SceneBuilder/"
+        println "RUNNING IN  workingDir : ${workingDir}"
+        commandLine   "java", "-jar", "SceneBuilder-8.1.1.jar"
+    }
+}
+
+
+
+task runSceneicView(type: Exec) {
+
+    doFirst {
+        println "Starting SceneBuilder..."
+        workingDir = "./ScenicView/"
+        println "RUNNING IN  workingDir : ${workingDir}"
+        commandLine   "java", "-jar", "ScenicView.jar"
+    }
+}
