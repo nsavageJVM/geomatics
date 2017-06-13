@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -15,6 +16,7 @@ import java.util.Map;
  * Created by ubu on 28.05.17.
  */
 @Controller
+@RequestMapping("/boot")
 public class ErrController implements ErrorController {
 
     private final static String ERROR_PATH = "/error";

@@ -18,7 +18,7 @@ import java.util.List;
  * Created by ubu on 29.05.17.
  */
 @RestController
-@RequestMapping("/gis")
+@RequestMapping("/boot/gis")
 public class PostGisController {
 
     private static final Logger logger = LoggerFactory.getLogger(PostGisController.class);

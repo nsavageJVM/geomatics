@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 
 @Controller
+@RequestMapping("/boot")
 public class EntryPointController {
 
     @RequestMapping("/")

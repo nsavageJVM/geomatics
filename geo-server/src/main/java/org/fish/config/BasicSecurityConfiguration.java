@@ -17,11 +17,11 @@ public class BasicSecurityConfiguration extends WebSecurityConfigurerAdapter {
         httpSecurity.authorizeRequests().antMatchers(  "/gis/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin().loginPage("/login").permitAll()
-                .and() .logout() .logoutUrl("/logout").logoutSuccessUrl("/login")
+                .formLogin().loginPage("/boot/login").permitAll()
+                .and() .logout() .logoutUrl("/boot/logout").logoutSuccessUrl("/boot/login")
                 .permitAll()
                 .and().exceptionHandling() //exception handling configuration
-                .accessDeniedPage("/error");
+                .accessDeniedPage("/boot/error");
 
         httpSecurity.csrf().disable();
         httpSecurity.headers().frameOptions().disable();
