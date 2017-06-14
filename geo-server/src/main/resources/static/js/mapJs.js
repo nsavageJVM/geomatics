@@ -3,7 +3,7 @@ function initMap() {
   console.log( "mapJs initMap loading" );
 
   // var wmsUrl ='http://localhost:8080/geoserver/osm/wms?';
-  var wmsUrl ='http://geos:8080/geoserver/osm/wms?';
+  var wmsUrl ='http://localhost:8080/geoserver/osm/wms?';
   var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
   var satellite_Base ='//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.jpg';
   var wmsLayer1 = L.tileLayer.wms(wmsUrl, {layers: 'osm:planet_osm_line', format: 'image/png', transparent: true });
