@@ -11,14 +11,14 @@
 
         <nav class="navbar navbar-static-top"  style="color:white;background-color:black;padding:0;min-height:20px;margin-bottom:4px;" >
 
-                    <a class="navbar-brand " href="#" th:href="@{/}">Home</a>
-                    <a class="navbar-brand " href="#" th:href="@{/map}">Map</a>
+                    <a class="navbar-brand " href="#" th:href="@{/boot}">Home</a>
+                    <a class="navbar-brand " href="#" th:href="@{/boot/map}">Map</a>
                     <ul class="nav">
                         <div sec:authorize="isAuthenticated()" class="text-right">
 
                         <form class="form-horizontal"
                               style="display:inline-block;position:absolute;right:20px;top:4px;color:white"
-                              th:action="@{/logout}" method="post">
+                              th:action="@{/boot/logout}" method="post">
                             <button type="submit" class="btn btn-primary">Logout</button>
                         </form>
                         </div>
