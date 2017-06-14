@@ -17,7 +17,7 @@ public class BasicSecurityConfiguration extends WebSecurityConfigurerAdapter {
         httpSecurity.authorizeRequests().antMatchers(  "/gis/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin().loginPage("/boot/login").permitAll()
+                .formLogin().loginPage("/boot/login").defaultSuccessUrl("/boot").permitAll()
                 .and() .logout() .logoutUrl("/boot/logout").logoutSuccessUrl("/boot/login")
                 .permitAll()
                 .and().exceptionHandling() //exception handling configuration
